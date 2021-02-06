@@ -1,0 +1,17 @@
+button.btn-close.d-block.ms-auto {
+    padding-bottom: 20px !important;
+}
+
+.modal-body .card-img-top{
+    border-radius: 10px;
+    border-width: 0;
+
+}
+
+.serach-result .card{
+    cursor: pointer;
+    background-color: #F8F7F5;
+    border: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
