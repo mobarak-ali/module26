@@ -49,6 +49,7 @@
     </nav>
     <!-- /Top Navigation -->
   </header>
+
   <main>
     <section class="search-meal my-5">
       <div class="continer">
@@ -57,9 +58,10 @@
             <!-- <form> -->
             <label for="searchmeal" class="visually-hidden">Search</label>
             <div class="input-group input-group-pill px-3 input-group-lg">
-              <input type="text" class="form-control" id="searchmeal" placeholder="Search for Meal...">
+              <input type="text" class="form-control" id="meal-name" placeholder="Search for Meal...">
               <div class="input-group-append">
-                <button type="submit" class="btn btn-primary btn-lg" id="searchButton">Search</button>
+                <button type="submit" class="btn btn-primary btn-lg" id="searchButton"
+                  onclick="searchMeal()">Search</button>
               </div>
             </div>
             <!-- </form> -->
@@ -68,66 +70,27 @@
       </div>
     </section>
     <!-- /Search Section -->
+
     <section class="serach-result">
       <div class="container">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4  g-5 mt-5 mb-5">
-
-          <div class="col">
-            <div class="card" data-bs-toggle="modal" data-bs-target="#showMeal">
-              <img src="https://loremflickr.com/320/240/paris,food?lock=1" class="card-img-top" alt="...">
-              <div class="card-body text-center">
-                <h5 class="card-title fw-bold">Meal Name</h5>
-                <!-- <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#showMeal">Meal Details</a> -->
-              </div>
-            </div>
-          </div>
-
-
-        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4  g-5 mt-5 mb-5" id="results"></div>
       </div>
     </section>
     <!-- /Search Results -->
   </main>
 
 
-  <!-- 
-    Show Meal Item Detail 
-  -->
-  <section class="modal fade" id="showMeal" tabindex="-1" aria-labelledby="showMealLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header d-none ">
-        </div>
-        <div class="modal-body pt-0">
-          <button type="button" class="btn-close ms-auto d-block" data-bs-dismiss="modal" aria-label="Close"></button>
-          <div class="card border-0">
-            <img src="https://loremflickr.com/320/240/paris,food" class="card-img-top" alt="...">
-            <div class="card-body p-0">
-              <h2 class="card-title my-4 fw-bold">Meal name</h2>
-              <h5 class="card-title mb-2 fw-bold">Ingredients</h5>
-              <ul class="list-group-item border-0">
-                <li>Lorem, ipsum dolor.</li>
-                <li>Reprehenderit, maxime nihil.</li>
-                <li>Alias, natus modi?</li>
-                <li>Optio, aperiam officia.</li>
-                <li>Excepturi, perspiciatis rem.</li>
-                <li>Autem, non voluptatibus.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer d-none">
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- /Search Item Detail -->
+  <!-- Show Meal Item Detail -->
+  <section id="modal-container">   </section>
+  <!-- /Item Detail (Modal) -->
 
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-    crossorigin="anonymous"></script>
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+
+  <script src="script.js"></script>
 
 </body>
 
