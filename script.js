@@ -86,8 +86,10 @@ function ingradients(data) {
 
     Object.keys(data).forEach(key => {
         const checkKey = key.search('strIngredient');
-        if (checkKey >= 0 && data[key] != "") {
-            // console.log(key, data[key]);
+
+        // Checks the ingredient value is not Emptuy("") or null
+        if (checkKey >= 0 && (data[key] != "" && data[key] != null)) {
+            // Writes as list item
             liValue = liValue + ` <li>${data[key]}</li> `;
         }
     });
