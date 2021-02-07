@@ -13,10 +13,12 @@ function searchMeal() {
     if (mealName === "") {
         // Prints if blank search is made
         resultWraper.innerHTML = `<p class=" h2 text-danger text-center w-100"> Please type something for search!</p>`;
+
     } else {
         // Adds valid search text to initial API url
         const searchURL = apiURL + mealName; 
-
+        clearSearchInput();
+        
         fetch(searchURL)
         .then(res => res.json())
         .then(data => {
@@ -94,4 +96,8 @@ function ingradients(data) {
         }
     });
     return liValue;
+}
+
+const clearSearchInput = () =>{
+    document.getElementById('meal-name').value = "";
 }
